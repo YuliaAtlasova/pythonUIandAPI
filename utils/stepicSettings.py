@@ -1,0 +1,6 @@
+STEPIC_EMAIL = 'tester-ja@yandex.ru'
+STEPIC_PASSWORD = 'api-test-01'
+STEPIC_WISHLIST_URL = 'https://stepik.org/learn/courses/wishlist'
+STEPIC_FAVOURITES_URL = 'https://stepik.org/learn/courses/favorites'
+STEPIC_HOME_URL = 'https://stepik.org/catalog'
+STEPIC_AUTH_URL = 'https://stepik.org/api/users/login'
