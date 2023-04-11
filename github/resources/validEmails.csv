@@ -1,0 +1,10 @@
+email_0,user@test123api.com
+email_1,user@testapi.com
+email_2,USER@TESTAPI.COM
+email_3,123user@testapi.com
+email_4,user123@testapi.com
+email_5,user#$%&‘*+—/=?^_`{|}~@testapi.com
+email_6,user.user@testapi.com
+email_7,user-user@testapi.com
+email_8,user@americanexpresstestapi.com
+email_9,user@test-api.com

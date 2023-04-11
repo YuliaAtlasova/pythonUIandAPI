@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utils.debug import debug_print
-from utils.stepicSettings import STEPIC_EMAIL
-from utils.stepicSettings import STEPIC_PASSWORD
+from stepic.resources.stepicSettings import STEPIC_EMAIL
+from stepic.resources.stepicSettings import STEPIC_PASSWORD
 from stepic.api import loginApi
 
 def login_with_ui(driver: webdriver):

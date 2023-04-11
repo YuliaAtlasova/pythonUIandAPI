@@ -2,12 +2,11 @@ import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from utils.debug import debug_print
-from utils import stepicSettings
+from stepic.resources import stepicSettings
 import stepic.steps.loginSteps
-from utils.stepicSettings import STEPIC_WISHLIST_URL
+from stepic.resources.stepicSettings import STEPIC_WISHLIST_URL
 
-class UiLoginTest(unittest.TestCase):
+class ApiLoginTest(unittest.TestCase):
 
 
     def setUp(self) -> None:
@@ -17,7 +16,6 @@ class UiLoginTest(unittest.TestCase):
 
 
     def test_check_wishlist(self):
-        debug_print('', 'test_check_wishlist')
         stepic.steps.loginSteps.login_with_api(self.driver)
         self.driver.get(STEPIC_WISHLIST_URL)
         time.sleep(3)

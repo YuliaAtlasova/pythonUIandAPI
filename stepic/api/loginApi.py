@@ -1,7 +1,7 @@
 import requests
-from utils.stepicSettings import STEPIC_EMAIL
-from utils.stepicSettings import STEPIC_PASSWORD
-from utils.stepicSettings import STEPIC_AUTH_URL
+from stepic.resources.stepicSettings import STEPIC_EMAIL
+from stepic.resources.stepicSettings import STEPIC_PASSWORD
+from stepic.resources.stepicSettings import STEPIC_AUTH_URL
 
 def get_auth_cookies(ui_cookies: list) -> dict:
     current_session = requests.Session()
@@ -23,4 +23,5 @@ def get_auth_cookies(ui_cookies: list) -> dict:
         'sessionid': resp.cookies.get('sessionid'),
         'csrftoken': resp.cookies.get('csrftoken')
     }
+    current_session.close()
     return result_cookies

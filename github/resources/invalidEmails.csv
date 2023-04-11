@@ -1,0 +1,10 @@
+inv_email_0,err_msg0,u ser@test123api.com
+inv_email_1,err_msg1,u ser@testapi.com
+inv_email_2,err_msg2,U SER@TESTAPI.COM
+inv_email_3,err_msg3,1 23user@testapi.com
+inv_email_4,err_msg4,u ser123@testapi.com
+inv_email_5,err_msg5,u ser#$%&‘*+—/=?^_`{|}~@testapi.com
+inv_email_6,err_msg6,u ser.user@testapi.com
+inv_email_7,err_msg7,u ser-user@testapi.com
+inv_email_8,err_msg8,u ser@americanexpresstestapi.com
+inv_email_9,err_msg9,u ser@test-api.com
