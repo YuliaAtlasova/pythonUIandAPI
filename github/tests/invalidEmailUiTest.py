@@ -32,8 +32,8 @@ class ValidEmailUiTest(unittest.TestCase):
         debug_print('driver connection closed', '')
 
     @parameterized.expand(load_csv_test_cases('../resources/invalidEmails.csv'))
-    def test_invalid_email(self, name, err, invalid_email):
-        debug_print('test name = ', invalid_email)
+    def test_invalid_email(self, test_name, invalid_email):
+        debug_print('test name = ', test_name)
         self.email_field.clear()
         self.email_field.send_keys(invalid_email)
         wait = WebDriverWait(self.driver, 5)

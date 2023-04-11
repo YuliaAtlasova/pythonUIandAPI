@@ -22,8 +22,8 @@ class ValidEmailApiTest(unittest.TestCase):
         debug_print('connection closed', '')
 
     @parameterized.expand(load_csv_test_cases('../resources/invalidEmails.csv'))
-    def test_valid_email(self, name, err, invalid_email):
-        debug_print('test name = ', name)
+    def test_valid_email(self, test_name, invalid_email):
+        debug_print('test name = ', test_name)
         payload = {"authenticity_token": self.token, "value": invalid_email}
         resp = self.connection.post(LOGIN_VALIDATION_URL, data=payload)
         page_with_error = resp.text
