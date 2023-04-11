@@ -1,4 +1,4 @@
-STEPIC_EMAIL = 'tester-ja@yandex.ru'
+STEPIC_EMAIL = 'tester-ja@mail.ru'
 STEPIC_PASSWORD = 'api-test-01'
 STEPIC_WISHLIST_URL = 'https://stepik.org/learn/courses/wishlist'
 STEPIC_FAVOURITES_URL = 'https://stepik.org/learn/courses/favorites'
