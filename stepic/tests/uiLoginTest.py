@@ -1,10 +1,11 @@
-import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from stepic.resources import stepicSettings
 import stepic.steps.loginSteps
-
+from stepic.resources.stepicSettings import STEPIC_FAVOURITES_URL
+from stepic.resources.stepicSettings import STEPIC_HOME_URL
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
 
 class UiLoginTest(unittest.TestCase):
 
@@ -12,13 +13,14 @@ class UiLoginTest(unittest.TestCase):
     def setUp(self) -> None:
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get(stepicSettings.STEPIC_HOME_URL)
+        self.driver.get(STEPIC_HOME_URL)
 
 
     def test_check_favorites(self):
         stepic.steps.loginSteps.login_with_ui(self.driver)
-        self.driver.get('https://stepik.org/learn/courses/favorites')
-        time.sleep(5)
+        self.driver.get(STEPIC_FAVOURITES_URL)
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, '.item-tile__title_with_badge >a')))
         favourites = self.driver.find_elements(By.CSS_SELECTOR, '.item-tile__title_with_badge >a')
         self.assertEqual(len(favourites), 2)
         self.assertEqual(favourites[0].text, 'Common English Verbs')
