@@ -10,7 +10,7 @@ from utils.debug import debug_print
 from utils.file_loader import load_csv_test_cases
 
 
-class ValidEmailUiTest(unittest.TestCase):
+class InvalidEmailUiTest(unittest.TestCase):
     driver = None
 
     @classmethod
