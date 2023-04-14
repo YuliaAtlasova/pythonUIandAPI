@@ -1,6 +1,4 @@
-import time
 import unittest
-
 from parameterized import parameterized
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -22,7 +20,8 @@ class ValidEmailUiTest(unittest.TestCase):
         cls.driver.get(START_URL)
         sign_up_btn = cls.driver.find_element(By.CSS_SELECTOR, '.HeaderMenu-link--sign-up')
         sign_up_btn.click()
-        time.sleep(5)
+        wait = WebDriverWait(cls.driver, 10.)
+        wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, '#email')))
         cls.email_field = cls.driver.find_element(By.CSS_SELECTOR, '#email')
         debug_print('driver connection open', '')
 
@@ -40,5 +39,3 @@ class ValidEmailUiTest(unittest.TestCase):
         continue_btn = self.driver.find_element(By.CSS_SELECTOR, '[data-optimizely-event = "click.signup_continue.email"]')
         assert not continue_btn.is_enabled()
         wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, '#email-err')))
-
-
