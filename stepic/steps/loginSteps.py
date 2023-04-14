@@ -45,7 +45,3 @@ def login_with_api(driver: webdriver):
     }
     driver.add_cookie(session_cookie)
     driver.add_cookie(csrftoken_cookie)
-
-
-if __name__ == '__main__':
-    debug_print('', 'Stepic login Steps MAIN')
