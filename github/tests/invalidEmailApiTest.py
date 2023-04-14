@@ -7,7 +7,7 @@ from github.api.getUnauthToken import get_request_token
 from github.resources.githubSettings import LOGIN_VALIDATION_URL
 from github.resources.githubSettings import INVALID_EMAIL_ERROR_MESSAGE
 
-class ValidEmailApiTest(unittest.TestCase):
+class InvalidEmailApiTest(unittest.TestCase):
     connection = None
 
     @classmethod
